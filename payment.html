@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment - Cherie & Co</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: white;
+      border-bottom: 2px solid #f4cdd8;
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo img {
+      width: 50px;
+      border-radius: 50%;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      border: 2px solid #f58bb2;
+      border-radius: 40px;
+      padding: 5px 25px;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+    }
+
+    nav a:nth-child(2) {
+      background-color: #f58bb2;
+      color: white;
+    }
+
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+      
+   .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+      
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%; 
+      left: 0;
+      background-color: #f58bb2;
+      border-radius: 16px;
+      padding: 10px 0;
+      min-width: 200px;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0, 1);
+    }
+
+   .dropdown-content a {
+     color: white;
+     text-decoration: none;
+     display: block;
+     padding: 10px 20px;
+     font-weight: bold;
+    }
+
+  .dropdown-content a:hover {
+    background-color: #f4cdd8;
+    color: black;
+    border-radius: 6px;
+   }
+      
+  .dropdown:hover .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
+     display: block;
+   }
+      
+    .login-btn {
+      background-color: #f4cdd8;
+      color: white;
+      border: none;
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .payment-banner {
+      background-color: #fcd3e1;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .payment-section {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 60px 40px;
+      gap: 40px;
+    }
+
+    .contact-info {
+      flex: 2;
+    }
+
+    .contact-info h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .contact-info input[type="text"],
+    .contact-info input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 12px;
+      border: 1px solid #999;
+      border-radius: 4px;
+    }
+
+    .row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .row input {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #999;
+      border-radius: 4px;
+    }
+
+    .payment-method {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .order-summary {
+      flex: 1;
+      background-color: #fcd3e1;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .order-summary h3 {
+      text-align: center
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .order-summary p {
+      display: flex;
+      justify-content: space-between;
+      margin: 6px 0;
+    }
+
+    .order-summary .total {
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .pay-btn {
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      background-color: #f58bb2;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 12px 0;
+      width: 100%;
+      font-size: 14px;
+      margin-top: 80px;
+    }
+
+    footer {
+      background-color: #f4cdd8;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 14px;
+      margin-top: auto;
+    }
+
+    footer a {
+      color: black;
+      text-decoration: none;
+    }
+
+    .footer-icons {
+      margin-top: 10px;
+      font-size: 22px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="CHERIE%20LOGO.jpg" alt="Cherie Logo">
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+        <div class="dropdown">
+    <a href="product.html" class="dropbtn">Products</a>
+        <div class="dropdown-content">
+            <a href="product.html">Top</a>
+            <a href="bottom.html">Bottom</a>
+            <a href="accessories.html">Accessories</a>
+            <a href="productsummary.html">Product Summary</a>
+        </div>
+  </div>
+      <a href="newarrival.html">New Arrivals</a>
+      <a href="sales.html">Sales & Promotion</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+      
+    <div class="header-right">
+      <span>Search</span> 🔍
+      <span>🛒</span>
+      <a href="login.html" class="login-btn">Login</a>
+    </div>
+  </header>
+
+  <div class="payment-banner">Payment</div>
+
+  <div class="payment-section">
+    <div class="contact-info">
+      <h3>Contact Information</h3>
+      <input type="text" placeholder="Full Name">
+      <input type="email" placeholder="Email Address">
+      <input type="text" placeholder="Shipping Address">
+      <div class="row">
+        <input type="text" placeholder="City">
+        <input type="text" placeholder="State">
+        <input type="text" placeholder="ZIP">
+      </div>
+
+      <div class="payment-method">
+        <h3>Payment Method</h3>
+        <label><input type="radio" checked> Credit/Debit Card</label>
+      </div>
+
+      <input type="text" placeholder="Card Number">
+      <div class="row">
+        <input type="text" placeholder="Expiration Date">
+        <input type="text" placeholder="CVV">
+      </div>
+    </div>
+
+    <div class="order-summary">
+  <h3>Order Summary</h3>
+  <div id="summaryItems"></div>
+  <p><span>Shipping Fee</span><span id="shippingFee">$ 5.00</span></p>
+  <p><span>Tax</span><span id="taxAmount">$ 0.00</span></p>
+  <p class="total"><span>TOTAL</span><span id="grandTotal">$ 0.00</span></p>
+  <a href="order.html" class="pay-btn">PAY NOW</a>
+</div>
+  </div>
+
+  <footer>
+    <p>© Cherie & Co 2025 | <a href="mailto:cherieandco@gmail.com">cherieandco@gmail.com</a></p>
+    <div class="footer-icons">
+      <span>📍</span>
+      <span>☎️</span>
+      <span>📷</span>
+    </div>
+  </footer>
+<script>
+  const cart = JSON.parse(localStorage.getItem('cherieCart')) || [];
+  const summaryItems = document.getElementById('summaryItems');
+  const shippingFee = 5.00; 
+  const taxRate = 0.06; 
+
+  let subtotal = 0;
+
+  cart.forEach(item => {
+    const itemTotal = item.price * item.qty;
+    subtotal += itemTotal;
+
+    const line = document.createElement('p');
+    line.innerHTML = `<span>${item.base} x ${item.qty}</span><span>$${itemTotal.toFixed(2)}</span>`;
+    summaryItems.appendChild(line);
+  });
+
+  const taxAmount = subtotal * taxRate;
+  const total = subtotal + taxAmount + shippingFee;
+
+  document.getElementById('taxAmount').textContent = `$${taxAmount.toFixed(2)}`;
+  document.getElementById('grandTotal').textContent = `$${total.toFixed(2)}`;
+</script>
+</body>
+</html>

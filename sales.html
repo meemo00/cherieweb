@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cherie & Co - Sales & Promotions</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: white;
+      border-bottom: 2px solid #f4cdd8;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
+    }
+
+    .logo img {
+      width: 60px;
+      border-radius: 50%;
+    }
+
+    nav {
+      display: flex;
+      border: 2px solid #f58bb2;
+      border-radius: 40px;
+      padding: 5px 20px;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+    }
+
+    nav a:nth-child(4) {
+      background-color: #f58bb2;
+      color: white;
+    }
+
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .search-btn {
+      position: relative;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .search-bar {
+      display: none;
+      position: absolute;
+      top: 30px;
+      right: 0;
+      background-color: #ff85b3;
+      border-radius: 40px;
+      padding: 10px 50px;
+      gap: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+
+    .search-btn:hover .search-bar{
+      display: flex;
+      }
+      
+    .search-bar button {
+      background: none;
+      border: none;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .search-bar button:hover {
+    transform: scale(1.1);
+      }
+
+    .login-btn {
+      background-color: #f4cdd8;
+      color: white;
+      border: none;
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    h2.title {
+      background-color: #f4cdd8;
+      width: max-content;
+      margin: 30px auto;
+      padding: 10px 25px;
+      border-radius: 20px;
+      font-size: 20px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      padding: 30px 50px;
+      justify-items: center;
+    }
+
+    .product-box {
+      background-color: #ffd6e3;
+      width: 180px;
+      padding: 15px 10px;
+      border-radius: 10px;
+      text-align: center;
+      position: relative;
+    }
+
+    .product-image {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-info-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-top: 5px;
+    }
+
+    .product-info-shadow {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: 100%;
+      height: 100%;
+      background-color: #f58bb2;
+      z-index: 0;
+    }
+
+    .product-info {
+      position: relative;
+      background-color: white;
+      border: 2px solid black;
+      padding: 10px;
+      font-size: 13px;
+      text-align: left;
+      z-index: 1;
+      width: 130px;
+    }
+
+    .product-info p {
+      margin: 3px 0;
+    }
+
+    .star {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      z-index: 2;
+    }
+
+    .star.top-right {
+      top: -10px;
+      right: -10px;
+    }
+
+    .star.bottom-left {
+      bottom: -10px;
+      left: -10px;
+    }
+
+    footer {
+      background-color: #f4cdd8;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 14px;
+      margin-top: auto;
+    }
+
+    footer a {
+      color: black;
+      text-decoration: none;
+    }
+
+    .footer-icons {
+      margin-top: 10px;
+      font-size: 22px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="CHERIE%20LOGO.jpg" alt="Cherie Logo" />
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="product.html">Products</a>
+      <a href="newarrival.html">New Arrivals</a>
+      <a href="sales.html">Sales & Promotion</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+    <div class="header-icons">
+      <div class="search-btn">
+        <span>Search</span>
+        <span>🔍</span>
+        <div class="search-bar">
+        <button>Top</button>
+        <button>Bottom</button>
+        <button>Accessories</button>
+     </div>
+</div>
+        
+      <span>🛒</span>
+      <a href="login.html" class="login-btn">Login</a>
+
+      <div class="search-bar" id="searchBar">
+        <button>Top</button>
+        <button>Bottom</button>
+        <button>Accessories</button>
+      </div>
+    </div>
+  </header>
+
+  <h2 class="title">SALES AND PROMOTION</h2>
+
+  <div class="products-grid">
+
+      <div class="product-box">
+      <div class="product-image">Product Image</div>
+      <div class="product-info-wrapper">
+        <div class="product-info-shadow"></div>
+        <div class="product-info">
+          <p>Product name:</p>
+          <p>Price:</p>
+          <p>Discount:</p>
+        </div>
+        <img src="star.png" class="star top-right" alt="star">
+        <img src="star.png" class="star bottom-left" alt="star">
+      </div>
+    </div>
+
+    <div class="product-box">
+      <div class="product-image">Product Image</div>
+      <div class="product-info-wrapper">
+        <div class="product-info-shadow"></div>
+        <div class="product-info">
+          <p>Product name:</p>
+          <p>Price:</p>
+          <p>Discount:</p>
+        </div>
+        <img src="star.png" class="star top-right" alt="star">
+        <img src="star.png" class="star bottom-left" alt="star">
+      </div>
+    </div>
+      
+      <div class="product-box">
+      <div class="product-image">Product Image</div>
+      <div class="product-info-wrapper">
+        <div class="product-info-shadow"></div>
+        <div class="product-info">
+          <p>Product name:</p>
+          <p>Price:</p>
+          <p>Discount:</p>
+        </div>
+        <img src="star.png" class="star top-right" alt="star">
+        <img src="star.png" class="star bottom-left" alt="star">
+      </div>
+    </div>
+      
+      <div class="product-box">
+      <div class="product-image">Product Image</div>
+      <div class="product-info-wrapper">
+        <div class="product-info-shadow"></div>
+        <div class="product-info">
+          <p>Product name:</p>
+          <p>Price:</p>
+          <p>Discount:</p>
+        </div>
+        <img src="star.png" class="star top-right" alt="star">
+        <img src="star.png" class="star bottom-left" alt="star">
+      </div>
+    </div>
+      
+      <div class="product-box">
+      <div class="product-image">Product Image</div>
+      <div class="product-info-wrapper">
+        <div class="product-info-shadow"></div>
+        <div class="product-info">
+          <p>Product name:</p>
+          <p>Price:</p>
+          <p>Discount:</p>
+        </div>
+        <img src="star.png" class="star top-right" alt="star">
+        <img src="star.png" class="star bottom-left" alt="star">
+      </div>
+    </div>
+      
+      <div class="product-box">
+      <div class="product-image">Product Image</div>
+      <div class="product-info-wrapper">
+        <div class="product-info-shadow"></div>
+        <div class="product-info">
+          <p>Product name:</p>
+          <p>Price:</p>
+          <p>Discount:</p>
+        </div>
+        <img src="star.png" class="star top-right" alt="star">
+        <img src="star.png" class="star bottom-left" alt="star">
+      </div>
+    </div>
+      
+      <div class="product-box">
+      <div class="product-image">Product Image</div>
+      <div class="product-info-wrapper">
+        <div class="product-info-shadow"></div>
+        <div class="product-info">
+          <p>Product name:</p>
+          <p>Price:</p>
+          <p>Discount:</p>
+        </div>
+        <img src="star.png" class="star top-right" alt="star">
+        <img src="star.png" class="star bottom-left" alt="star">
+      </div>
+    </div>
+      
+      <div class="product-box">
+      <div class="product-image">Product Image</div>
+      <div class="product-info-wrapper">
+        <div class="product-info-shadow"></div>
+        <div class="product-info">
+          <p>Product name:</p>
+          <p>Price:</p>
+          <p>Discount:</p>
+        </div>
+        <img src="star.png" class="star top-right" alt="star">
+        <img src="star.png" class="star bottom-left" alt="star">
+      </div>
+    </div>
+      
+  </div>
+
+  <footer>
+    <p>© Cherie & Co 2025 | <a href="mailto:cherieandco@gmail.com">cherieandco@gmail.com</a></p>
+    <div class="footer-icons">
+      <span>📍</span>
+      <span>☎️</span>
+      <span>📷</span>
+    </div>
+  </footer>
+</body>
+</html>

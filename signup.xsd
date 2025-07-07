@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="https://www.w3schools.com"
+xmlns="https://www.w3schools.com"
+elementFormDefault="qualified">
+
+
+<xs:element name="users"> 
+	  <xs:complexType>
+	  <xs:sequence>
+	  <xs:element name="user" type="userdetails" minOccurs="1" maxOccurs="unbounded"/>   
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+
+<xs:complexType name="userdetails">
+<xs:sequence>
+    <xs:element name="firstname" type="xs:string" minOccurs="0"/>
+    <xs:element name="lastname" type="xs:string" minOccurs="0"/>
+	
+	<xs:element name="username" minOccurs="1">
+	 <xs:simpleType>
+	    <xs:restriction base="xs:string">   
+	      <xs:minLength value="8"/>
+	      <xs:maxLength value="16"/>
+	    </xs:restriction>
+	 </xs:simpleType>
+	</xs:element>
+	
+    <xs:element name="password" minOccurs="1">
+	  <xs:simpleType>
+	    <xs:restriction base="xs:string">
+	      <xs:minLength value="8"/>
+	      <xs:maxLength value="16"/>
+          <xs:pattern value="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).+"/>
+	    </xs:restriction>
+	  </xs:simpleType>
+	</xs:element>
+	
+	<xs:element name="fulladdress" minOccurs="1">
+	  <xs:simpleType>
+	    <xs:restriction base="xs:string">
+	      <xs:minLength value="10"/>
+	      <xs:maxLength value="50"/>
+	    </xs:restriction>
+	  </xs:simpleType>
+	</xs:element>
+	
+    <xs:element name="postcode" minOccurs="1">
+	  <xs:simpleType>
+	    <xs:restriction base="xs:integer">
+	      <xs:totalDigits value="5"/>
+	    </xs:restriction>
+	  </xs:simpleType>
+	</xs:element>
+	
+	<xs:element name="city" minOccurs="1">
+	  <xs:simpleType>
+	   <xs:restriction base="xs:string">
+	     <xs:minLength value="2"/>
+	     <xs:maxLength value="20"/>
+	   </xs:restriction>
+	  </xs:simpleType>
+	</xs:element>	
+	
+	<xs:element name="state" minOccurs="1">
+	  <xs:simpleType>
+	    <xs:restriction base="xs:string">
+	      <xs:enumeration value="Perlis"/>
+	      <xs:enumeration value="Kedah"/>
+	      <xs:enumeration value="Pulau Pinang"/>
+	      <xs:enumeration value="Perak"/>
+	      <xs:enumeration value="Selangor"/>
+	      <xs:enumeration value="Negeri Sembilan"/>
+	      <xs:enumeration value="Melaka"/>
+	      <xs:enumeration value="Johor"/>
+	      <xs:enumeration value="Pahang"/>
+	      <xs:enumeration value="Terengganu"/>
+	      <xs:enumeration value="Kelantan"/>
+	      <xs:enumeration value="Sabah"/>
+	      <xs:enumeration value="Sarawak"/>
+	      <xs:enumeration value="Wilayah Persekutuan Kuala Lumpur"/>
+	      <xs:enumeration value="Wilayah Persekutuan Putrajaya"/>
+	      <xs:enumeration value="Wilayah Persekutuan Labuan"/>
+	    </xs:restriction>
+	  </xs:simpleType>
+	</xs:element>
+	
+	<xs:element name="phone" minOccurs="1">
+	  <xs:simpleType>
+	     <xs:restriction base="xs:string">
+	       <xs:pattern value="\d{3}[-]\d{7}"/>
+	       <xs:length value="11"/>
+	     </xs:restriction>
+	  </xs:simpleType>
+	</xs:element>
+	
+	<xs:element name="email" minOccurs="1">
+	  <xs:simpleType>
+	     <xs:restriction base="xs:string">
+	      <xs:pattern value="[^@\s]+@[^@\s]+\.[^@\s]+"/>
+	     </xs:restriction>
+	  </xs:simpleType>
+	</xs:element>
+	
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
+
+ 

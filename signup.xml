@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<users
+xmlns="https://www.w3schools.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="https://www.w3schools.com signup.xsd">
+    <user>
+        <firstname>Wan</firstname>
+        <lastname>Syafiqah</lastname>
+        <username>syafiqah2025</username>
+        <password>SyaFiq@123</password>
+        <fulladdress>No 8, Jalan Kenangan, Taman Aman</fulladdress>
+        <postcode>43000</postcode>
+		<city> Shah Alam </city>
+        <state>Selangor</state>
+        <phone>012-3456789</phone>
+        <email>syafiqah@gmail.com</email>
+    </user>
+	
+	 <user>
+        <firstname>Asmaa</firstname>
+        <lastname>Sofiya</lastname>
+        <username>sofiyaa22</username>
+        <password>Sofiyaa23?</password>
+        <fulladdress>No 12, Jalan Raja Laut, Taman Botani</fulladdress>
+        <postcode>05678</postcode>
+		<city>Temerloh</city>
+        <state>Pahang</state>
+        <phone>017-6899012</phone>
+        <email>asmaa1@gmail.com</email>
+    </user>
+	
+	 <user>
+        <firstname>Afifah</firstname>
+        <lastname>Hannani</lastname>
+        <username>afifah34</username>
+        <password>12Afif@H</password>
+        <fulladdress>No 10, Jalan Aman , Taman Cempaka</fulladdress>
+        <postcode>43890</postcode>
+        <city>Ampang</city>
+		<state>Wilayah Persekutuan Kuala Lumpur</state>
+        <phone>017-0914567</phone>
+        <email>afifah@gmail.com</email>
+    </user>
+	
+	 <user>
+        <firstname>Nurul</firstname>
+        <lastname>Hasanah</lastname>
+        <username>Hasanah09</username>
+        <password>hasanaH@@3</password>
+        <fulladdress>No 60, Jalan Batu Kawan, Taman Eco</fulladdress>
+        <postcode>06622</postcode>
+		<city>Butterworth</city>
+        <state>Pulau Pinang</state>
+        <phone>011-0980125</phone>
+        <email>hasanah@gmail.com</email>
+    </user>
+	
+	 <user>
+        <firstname>Alisya</firstname>
+        <lastname>Law</lastname>
+        <username>alisyaaa</username>
+        <password>AliSya@2</password>
+        <fulladdress>No 01, Jalan Othman, Taman Kayangan</fulladdress>
+        <postcode>05609</postcode>
+		<city>Miri</city>
+        <state>Sarawak</state>
+        <phone>011-7770004</phone>
+        <email>alisya@gmail.com</email>
+    </user>
+</users>
+
+

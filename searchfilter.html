@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cherie & Co - Search Top</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: white;
+      color: black;
+    }
+
+    header {
+      background-color: white;
+      border-bottom: 2px solid #f4cdd8;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+    }
+
+    .logo img {
+      width: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .search-bar {
+      flex: 1;
+      margin: 0 200px;
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border: 2px solid #f58bb2;
+      border-radius: 40px;
+      padding: 5px 20px;
+    }
+
+    .search-bar input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 16px;
+      background: transparent;
+    }
+
+    .search-bar span {
+      font-size: 20px;
+      color: #f58bb2;
+      cursor: pointer;
+    }
+
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .login-btn {
+      background-color: #f4cdd8;
+      color: white;
+      border: none;
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .content {
+      display: flex;
+      padding: 20px;
+    }
+
+    .filter-section {
+      width: 25%;
+      padding-right: 20px;
+    }
+
+    .filter-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .filter-section h3 {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .filter-box {
+      background-color: #f9dce5;
+      padding: 15px;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+
+    .filter-box label {
+      display: block;
+      margin: 5px 0;
+    }
+
+    .grid-labels {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px 10px;
+    }
+
+    .grid-labels label {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .product-section {
+      width: 75%;
+    }
+
+    .breadcrumb {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .product-card {
+      background-color: #f9dce5;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .product-image {
+      background-color: #f9dce5;
+      height: 100px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .product-name,
+    .product-price {
+      background-color: white;
+      padding: 10px 5px;
+      border-radius: 10px;
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    footer {
+      background-color: #f4cdd8;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 14px;
+      color: black;
+    }
+
+    .footer-icons {
+      margin-top: 8px;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="CHERIE%20LOGO.jpg" alt="Cherie Logo" />
+    </div>
+    <div class="search-bar">
+      <input type="text" value="Top" />
+      <span>🔍</span>
+    </div>
+    <div class="header-icons">
+      <span>🛒</span>
+      <a href="login.html" class="login-btn">Login</a>
+    </div>
+  </header>
+
+  <div class="content">
+    <aside class="filter-section">
+    <div class="filter-title">SEARCH : TOP</div>
+
+      <div class="filter-box">
+        <h3>Price</h3>
+        <label><input type="radio" name="price" /> RM 0 - RM 40</label>
+        <label><input type="radio" name="price" /> RM 50 - RM 90</label>
+        <label><input type="radio" name="price" /> RM 109 - RM 140</label>
+      </div>
+
+      <div class="filter-box">
+        <h3>Colour</h3>
+        <div class="grid-labels">
+          <label><input type="checkbox" /> White</label>
+          <label><input type="checkbox" /> Brown</label>
+          <label><input type="checkbox" /> Black</label>
+          <label><input type="checkbox" /> Blue</label>
+          <label><input type="checkbox" /> Purple</label>
+          <label><input type="checkbox" /> Green</label>
+          <label><input type="checkbox" /> Beige</label>
+          <label><input type="checkbox" /> Pink</label>
+          <label><input type="checkbox" /> Red</label>
+        </div>
+      </div>
+
+      <div class="filter-box">
+        <h3>Size</h3>
+        <div class="grid-labels">
+          <label><input type="checkbox" /> XS</label>
+          <label><input type="checkbox" /> S</label>
+          <label><input type="checkbox" /> M</label>
+          <label><input type="checkbox" /> L</label>
+          <label><input type="checkbox" /> XL</label>
+          <label><input type="checkbox" /> XXL</label>
+          <label><input type="checkbox" /> XXXL</label>
+          <label><input type="checkbox" /> XXXXL</label>
+        </div>
+      </div>
+    </aside>
+
+    <section class="product-section">
+      <div class="breadcrumb">Home</div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-image">Product Images</div>
+          <div class="product-name">Product Name</div>
+          <div class="product-price">RM 00.00</div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">Product Images</div>
+          <div class="product-name">Product Name</div>
+          <div class="product-price">RM 00.00</div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">Product Images</div>
+          <div class="product-name">Product Name</div>
+          <div class="product-price">RM 00.00</div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">Product Images</div>
+          <div class="product-name">Product Name</div>
+          <div class="product-price">RM 00.00</div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">Product Images</div>
+          <div class="product-name">Product Name</div>
+          <div class="product-price">RM 00.00</div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">Product Images</div>
+          <div class="product-name">Product Name</div>
+          <div class="product-price">RM 00.00</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>© Cherie & Co 2025 | <a href="mailto:cherieandco@gmail.com">cherieandco@gmail.com</a></p>
+    <div class="footer-icons">
+      <span>📍</span>
+      <span>☎️</span>
+      <span>📷</span>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product Summary – Cherie & Co</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+      background-color: #fff0f5;
+      color: #222;
+    }
+
+    h2 {
+      text-align: center;
+      color: #e53060;
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+
+    h3 {
+      color: black;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    table {
+      width: 90%;
+      margin: auto;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #aaa;
+      padding: 8px 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f58bb2;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h2>Product Summary</h2>
+  <div id="summary"></div>
+
+  <script>
+    const xmlString = `
+      <clothes>
+        <topclothes>
+          <top>Blouse</top>
+          <tprice>RM40.00</tprice>
+          <tcolour>Black | White | Cream | Khaki | Cherry Red</tcolour>
+          <tsize>XS | S | M | L | XL | XXL</tsize>
+          <treviews>50 Reviews</treviews>
+        </topclothes>
+
+        <topclothes>
+          <top>Cardigan</top>
+          <tprice>RM39.90</tprice>
+          <tcolour>Black | White | Cream | Khaki | Cherry Red</tcolour>
+          <tsize>XS | S | M | L | XL | XXL</tsize>
+          <treviews>78 Reviews</treviews>
+        </topclothes>
+
+        <topclothes>
+          <top>Dress</top>
+          <tprice>RM45.00</tprice>
+          <tcolour>Black | White | Cream | Khaki | Cherry Red</tcolour>
+          <tsize>XS | S | M | L | XL | XXL</tsize>
+          <treviews>39 Reviews</treviews>
+        </topclothes>
+
+        <topclothes>
+	       <top>Shirt</top>
+		   <tprice>RM30.00</tprice>
+		   <tcolour> Black | White | Cream | Khaki | Cherry Red</tcolour>
+		   <tsize> XS | S | M | L | XL | XXL </tsize>
+		   <treviews>15 Reviews</treviews>
+		</topclothes>
+
+        <bottomclothes>
+          <bottom>Jeans</bottom>
+          <bprice>RM49.00</bprice>
+          <bcolour>Black | Cream | Grey | Khaki</bcolour>
+          <bsize>XS | S | M | L | XL | XXL</bsize>
+          <breviews>20 Reviews</breviews>
+        </bottomclothes>
+
+       <bottomclothes>
+	       <bottom>Pants</bottom>
+		   <bprice>RM39.00</bprice>
+		   <bcolour> Black | White | Cream | Grey | Cherry Red</bcolour>
+		   <bsize> XS | S | M | L | XL | XXL </bsize>
+		   <breviews>26 Reviews</breviews>
+		</bottomclothes>
+	  
+	  	<bottomclothes>
+	       <bottom>Skirt</bottom>
+		   <bprice>RM46.90</bprice>
+		   <bcolour> Black | White | Cream | Grey | Jeans </bcolour>
+		   <bsize> XS | S | M | L | XL | XXL </bsize>
+		   <breviews>22 Reviews</breviews>
+		</bottomclothes>
+
+       <bottomclothes>
+          <bottom>Short</bottom>
+          <bprice>RM39.00</bprice>
+          <bcolour>Black | Cream | Grey | Khaki</bcolour>
+          <bsize>XS | S | M | L | XL | XXL</bsize>
+          <breviews>32 Reviews</breviews>
+        </bottomclothes>
+
+
+        <accessories>
+          <accessoriesname>Bracelet</accessoriesname>
+          <aprice>RM29.00</aprice>
+          <acolour>Gold | Silver</acolour>
+          <asize>14CM | 15CM | 16CM | 17CM | 18CM | 20CM</asize>
+          <areviews>122 Reviews</areviews>
+        </accessories>
+
+        <accessories>
+	       <accessoriesname>Earrings</accessoriesname>
+		   <aprice>RM39.00</aprice>
+		   <acolour> Gold | Silver </acolour>
+		   <asize> 40CM | 45CM | 50CM | 55CM | 60CM </asize>
+		   <areviews> 15 Reviews </areviews>
+		</accessories>
+
+        <accessories>
+	       <accessoriesname>Necklace</accessoriesname>
+		   <aprice>RM59.00</aprice>
+		   <acolour> Gold | Silver </acolour>
+		   <asize> 40CM | 45CM | 50CM | 55CM | 60CM </asize>
+		   <areviews> 78 Reviews </areviews>
+		</accessories>
+	  
+	  	 <accessories>
+	       <accessoriesname>Ring</accessoriesname>
+		   <aprice>RM29.00</aprice>
+		   <acolour> Gold | Silver | Rosepink </acolour>
+		   <asize> 10-11 | 12-13 | 14-16 | 17-18 | 19-20 | 21-22 </asize>
+		   <areviews>95 Reviews</areviews>
+		</accessories>
+      </clothes>
+    `;
+
+    const xslString = `
+      <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+        <xsl:template match="/">
+          <div>
+            <h3>TOP CLOTHES</h3>
+            <table>
+              <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Colour</th>
+                <th>Size</th>
+                <th>Reviews</th>
+              </tr>
+              <xsl:for-each select="clothes/topclothes">
+                <tr>
+                  <td><xsl:value-of select="top" /></td>
+                  <td><xsl:value-of select="tprice" /></td>
+                  <td><xsl:value-of select="tcolour" /></td>
+                  <td><xsl:value-of select="tsize" /></td>
+                  <td><xsl:value-of select="treviews" /></td>
+                </tr>
+              </xsl:for-each>
+            </table>
+
+            <h3>BOTTOM CLOTHES</h3>
+            <table>
+              <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Colour</th>
+                <th>Size</th>
+                <th>Reviews</th>
+              </tr>
+              <xsl:for-each select="clothes/bottomclothes">
+                <tr>
+                  <td><xsl:value-of select="bottom" /></td>
+                  <td><xsl:value-of select="bprice" /></td>
+                  <td><xsl:value-of select="bcolour" /></td>
+                  <td><xsl:value-of select="bsize" /></td>
+                  <td><xsl:value-of select="breviews" /></td>
+                </tr>
+              </xsl:for-each>
+            </table>
+
+            <h3>ACCESSORIES</h3>
+            <table>
+              <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Colour</th>
+                <th>Size</th>
+                <th>Reviews</th>
+              </tr>
+              <xsl:for-each select="clothes/accessories">
+                <tr>
+                  <td><xsl:value-of select="accessoriesname" /></td>
+                  <td><xsl:value-of select="aprice" /></td>
+                  <td><xsl:value-of select="acolour" /></td>
+                  <td><xsl:value-of select="asize" /></td>
+                  <td><xsl:value-of select="areviews" /></td>
+                </tr>
+              </xsl:for-each>
+            </table>
+          </div>
+        </xsl:template>
+      </xsl:stylesheet>
+    `;
+
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(xmlString, "text/xml");
+    const xsl = parser.parseFromString(xslString, "text/xml");
+
+    const xsltProcessor = new XSLTProcessor();
+    xsltProcessor.importStylesheet(xsl);
+    const result = xsltProcessor.transformToFragment(xml, document);
+    document.getElementById("summary").appendChild(result);
+  </script>
+</body>
+</html>

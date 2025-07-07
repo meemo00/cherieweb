@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Cherie & Co</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: white;
+      color: black;
+    }
+
+    header {
+      background-color: white;
+      border-bottom: 2px solid #f4cdd8;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+    }
+
+    .logo img {
+      width: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      border: 2px solid #f58bb2;
+      border-radius: 40px;
+      padding: 5px 25px;
+      background-color: #fff;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+    }
+
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 14px;
+    }
+
+    .login-btn {
+     background-color: #f4cdd8;
+      color: white;
+      border: none;
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 70vh;
+      padding: 40px 0;
+      background-color: white;
+    }
+
+    .login-card {
+      background-color: #f4cdd8;
+      padding: 40px 30px;
+      border-radius: 5px;
+      width: 300px;
+      text-align: center;
+    }
+
+    .login-card h2 {
+      margin-bottom: 20px;
+    }
+
+    .login-card img {
+      width: 50px;
+      margin-bottom: 20px;
+    }
+
+    .login-card input[type="email"],
+    .login-card input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 25px;
+      background-color: #ffeaf2;
+    }
+
+    .login-card label {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .login-card input[type="checkbox"] {
+      margin-right: 5px;
+      accent-color: #f58bb2;
+    }
+
+    .login-card button {
+      background-color: #f5006a;
+      color: white;
+      border: none;
+      padding: 10px 0;
+      width: 100%;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login-card p {
+      margin-top: 15px;
+      font-size: 12px;
+    }
+
+    .login-card a {
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: #f4cdd8;
+      color: black;
+      font-size: 14px;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .footer-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 20px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="CHERIE%20LOGO.jpg" alt="Cherie Logo" />
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="product.html">Products</a>
+      <a href="newarrival.html">New Arrivals</a>
+      <a href="sales.html">Sales & Promotion</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+    <div class="header-icons">
+      <span>Search</span>
+      <span>🔍</span>
+      <span>🛒</span>
+      <a href="login.html" class="login-btn">Login</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="login-card">
+      <h2>WELCOME TO</h2>
+      <img src="CHERIE%20LOGO.jpg" alt="Cherie Logo">
+      <form>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <label><input type="checkbox"> Remember me</label>
+        <button type="submit">LOGIN</button>
+      </form>
+      <p>Not a member? <a href="#">Sign up now</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© Cherie & Co 2025 | <a href="mailto:cherieandco@gmail.com">cherieandco@gmail.com</a></p>
+    <div class="footer-icons">
+      <span>📍</span>
+      <span>☎️</span>
+      <span>📷</span>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="summarycherie.xsl"?>
+
+  <clothes>
+		<topclothes>
+	       <top>TOP 1</top>
+		   <tprice>RM40.00</tprice>
+		   <tcolour> Black | White | Cream | Khaki | Cherry Red</tcolour>
+		   <tsize> XS | S | M | L | XL | XXL </tsize>
+		   <treviews> 50 Reviews</treviews>
+		</topclothes>
+		
+		<topclothes>
+	       <top> TOP 2 </top>
+		   <tprice>RM45.00</tprice>
+		   <tcolour> Black | White | Cream | Khaki | Cherry Red</tcolour>
+		   <tsize> XS | S | M | L | XL | XXL </tsize>
+		   <treviews> 39 Reviews </treviews>
+		</topclothes>
+	  
+		<topclothes>
+	       <top>TOP 3</top>
+		   <tprice>RM30.00</tprice>
+		   <tcolour> Black | White | Cream | Khaki | Cherry Red</tcolour>
+		   <tsize> XS | S | M | L | XL | XXL </tsize>
+		   <treviews>15 Reviews</treviews>
+		</topclothes>
+	 
+		<bottomclothes>
+	       <bottom>BOTTOM 1</bottom>
+		   <bprice>RM49.00</bprice>
+		   <bcolour> Black | Cream | Grey | Khaki </bcolour>
+		   <bsize> XS | S | M | L | XL | XXL </bsize>
+		   <breviews>20 Reviews</breviews>
+		</bottomclothes>
+		
+		<bottomclothes>
+	       <bottom>BOTTOM 2</bottom>
+		   <bprice>RM39.00</bprice>
+		   <bcolour> Black | White | Cream | Grey | Jeans | Cherry Red</bcolour>
+		   <bsize> XS | S | M | L | XL | XXL </bsize>
+		   <breviews>26 Reviews</breviews>
+		</bottomclothes>
+	  
+	  	<bottomclothes>
+	       <bottom>BOTTOM 3</bottom>
+		   <bprice>RM46.90</bprice>
+		   <bcolour> Black | White | Cream | Grey | Jeans </bcolour>
+		   <bsize> XS | S | M | L | XL | XXL </bsize>
+		   <breviews>22 Reviews</breviews>
+		</bottomclothes>
+	  
+	  	<accesories>
+	       <accesoriesname>BRACELET</accesoriesname>
+		   <aprice>RM29.00</aprice>
+		   <acolour> Gold | Silver </acolour>
+		   <asize> 14CM | 15CM | 16CM | 17CM | 18CM | 20CM </asize>
+		   <areviews>122 Reviews</areviews>
+		</accesories>
+	  
+	  	<accesories>
+	       <accesoriesname>NECKLACE</accesoriesname>
+		   <aprice>RM59.00</aprice>
+		   <acolour> Gold | Silver </acolour>
+		   <asize> 40CM | 45CM | 50CM | 55CM | 60CM </asize>
+		   <areviews> 78 Reviews </areviews>
+		</accesories>
+	  
+	  	 <accesories>
+	       <accesoriesname>RING</accesoriesname>
+		   <aprice>RM29.00</aprice>
+		   <acolour> Gold | Silver | Rosepink </acolour>
+		   <asize> 10-11 | 12-13 | 14-16 | 17-18 | 19-20 | 21-22 </asize>
+		   <areviews>95 Reviews</areviews>
+		</accesories>
+	</clothes>

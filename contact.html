@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cherie & Co - Contact Us</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: white;
+      color: black;
+    }
+
+    header {
+      background-color: white;
+      border-bottom: 2px solid #f4cdd8;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+    }
+
+    .logo img {
+      width: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      border: 2px solid #f58bb2;
+      border-radius: 40px;
+      padding: 5px 25px;
+      background-color: #fff;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+    }
+
+    nav a.active {
+      background-color: #f58bb2;
+      color: white;
+    }
+
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+         .search-btn {
+      position: relative;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .search-bar {
+      display: none;
+      position: absolute;
+      top: 30px;
+      right: 0;
+      background-color: #ff85b3;
+      border-radius: 40px;
+      padding: 10px 50px;
+      gap: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+
+    .search-btn:hover .search-bar{
+      display: flex;
+      }
+      
+    .search-bar button {
+      background: none;
+      border: none;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .search-bar button:hover {
+    transform: scale(1.1);
+      }
+
+    .login-btn {
+     background-color: #f4cdd8;
+      color: white;
+      border: none;
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about-section {
+      background-color: #f4cdd8;
+      width: 90%;
+      height: 150px;
+      margin: 30px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .contact-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .contact-cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background-color: #f9dce5;
+      border-radius: 15px;
+      width: 140px;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: bold;
+    }
+
+    .card span {
+      font-size: 30px;
+    }
+
+    footer {
+      background-color: #f4cdd8;
+      color: black;
+      font-size: 14px;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .footer-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 5px;
+      font-size: 20px;
+    }
+
+    .footer-icons span {
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="CHERIE%20LOGO.jpg" alt="Cherie Logo" />
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="product.html">Products</a>
+      <a href="newarrival.html">New Arrivals</a>
+      <a href="sales.html">Sales & Promotion</a>
+      <a href="contact.html" class="active">Contact Us</a>
+    </nav>
+    <div class="header-icons">
+      <div class="search-btn">
+        <span>Search</span>
+        <span>🔍</span>
+        <div class="search-bar">
+        <button>Top</button>
+        <button>Bottom</button>
+        <button>Accessories</button>
+     </div>
+</div>
+        
+      <span>🛒</span>
+      <a href="login.html" class="login-btn">Login</a>
+
+      <div class="search-bar" id="searchBar">
+        <button>Top</button>
+        <button>Bottom</button>
+        <button>Accessories</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="about-section">About Us</section>
+
+    <div class="contact-title">Contact Information</div>
+
+    <div class="contact-cards">
+      <div class="card">
+        <span>☎️</span>
+        Phone Number
+      </div>
+      <div class="card">
+        <span>📍</span>
+        Address
+      </div>
+      <div class="card">
+        <span>📧</span>
+        Gmail
+      </div>
+      <div class="card">
+        <span>📸</span>
+        Instagram
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© Cherie & Co 2025 | <a href="mailto:cherieandco@gmail.com">cherieandco@gmail.com</a></p>
+    <div class="footer-icons">
+      <span>📍</span>
+      <span>☎️</span>
+      <span>📷</span>
+    </div>
+  </footer>
+
+</body>
+</html>
